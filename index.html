@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crab Station – Seafood Donburi | Dhaka</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🦀</span>
+        <div class="logo-text">
+          <span class="logo-main">Crab Station</span>
+          <span class="logo-sub">Seafood Donburi</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart-btn" onclick="toggleCart()">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="#menu" class="btn-order">Order Now</a>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="bubble" style="--x:10%;--y:20%;--s:80px;--d:4s"></div>
+      <div class="bubble" style="--x:80%;--y:60%;--s:120px;--d:6s"></div>
+      <div class="bubble" style="--x:50%;--y:80%;--s:60px;--d:3s"></div>
+      <div class="bubble" style="--x:30%;--y:40%;--s:100px;--d:5s"></div>
+      <div class="bubble" style="--x:70%;--y:15%;--s:70px;--d:7s"></div>
+      <div class="wave-container">
+        <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,64 C180,100 360,20 540,60 C720,100 900,20 1080,60 C1260,100 1380,40 1440,64 L1440,120 L0,120 Z" fill="rgba(255,255,255,0.05)"/>
+        </svg>
+      </div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><i class="fas fa-fish"></i> Fresh From The Ocean</p>
+      <h1 class="hero-title">
+        Taste the<br/>
+        <em>Ocean's Finest</em><br/>
+        at Crab Station
+      </h1>
+      <p class="hero-desc">Premium seafood donburi & crab delicacies served fresh in the heart of Dhaka. Experience coastal flavors like never before.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn-primary">Explore Menu <i class="fas fa-arrow-right"></i></a>
+        <a href="#about" class="btn-ghost">Our Story</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">15+</span>
+          <span class="stat-lbl">Menu Items</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">৳200</span>
+          <span class="stat-lbl">Starts From</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-lbl">Fresh Seafood</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="hero-plate-ring"></div>
+      <div class="hero-plate-ring ring2"></div>
+      <div class="hero-plate">
+        <div class="crab-emoji-large">🦀</div>
+        <div class="plate-items">
+          <span>🍚</span><span>🦐</span><span>🌿</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="features">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-fish"></i></div>
+          <h3>Ocean Fresh</h3>
+          <p>Sourced daily from the finest seafood markets for peak freshness and flavour.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-fire-burner"></i></div>
+          <h3>Chef's Mastery</h3>
+          <p>Every donburi bowl is crafted with artisan precision and bold coastal spices.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-motorcycle"></i></div>
+          <h3>Fast Delivery</h3>
+          <p>Hot meals delivered to your door via foodpanda — quick and reliable.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+          <h3>Clean Ingredients</h3>
+          <p>No artificial additives — just honest, wholesome, sea-to-bowl cooking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-visual">
+        <div class="about-badge">
+          <span class="badge-emoji">🦀</span>
+          <span>Est. 2024</span>
+        </div>
+        <div class="about-img-card">
+          <div class="about-bowl">
+            <div class="bowl-emoji">🍱</div>
+            <div class="bowl-toppings">
+              <span>🦞</span><span>🍳</span><span>🌶️</span><span>🥬</span>
+            </div>
+          </div>
+          <div class="float-tag tag1"><i class="fas fa-star"></i> Premium Quality</div>
+          <div class="float-tag tag2">🦀 Crab Specialists</div>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="section-eyebrow">Our Story</p>
+        <h2 class="section-title">Where the Ocean<br/><em>Meets the Bowl</em></h2>
+        <p class="about-desc">Crab Station was born from a passion for coastal cuisine and the vibrant seafood culture of Dhaka. Nestled on Love Road in Mohammadpur, we bring you the authentic taste of the ocean in every bowl.</p>
+        <p class="about-desc">Our signature Seafood Donburi blends Japanese bowl-dining tradition with bold Bangladeshi coastal flavors — a fusion that's truly one of a kind.</p>
+        <div class="about-highlights">
+          <div class="highlight">
+            <i class="fas fa-check-circle"></i>
+            <span>Dine-in experience available</span>
+          </div>
+          <div class="highlight">
+            <i class="fas fa-check-circle"></i>
+            <span>Delivery via foodpanda</span>
+          </div>
+          <div class="highlight">
+            <i class="fas fa-check-circle"></i>
+            <span>Priced ৳200–৳400 per person</span>
+          </div>
+          <div class="highlight">
+            <i class="fas fa-check-circle"></i>
+            <span>Located on Love Road, Dhaka 1216</span>
+          </div>
+        </div>
+        <a href="#menu" class="btn-primary">View Our Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Our Menu</p>
+        <h2 class="section-title">Crafted with <em>Love & Ocean</em></h2>
+        <p class="section-sub">Every dish is made to order — fresh, bold, and satisfying.</p>
+      </div>
+      <div class="menu-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="donburi">Donburi</button>
+        <button class="filter-btn" data-filter="crab">Crab</button>
+        <button class="filter-btn" data-filter="sides">Sides</button>
+        <button class="filter-btn" data-filter="drinks">Drinks</button>
+      </div>
+      <div class="menu-grid" id="menuGrid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPECIAL OFFER ============ -->
+  <section class="offer-section">
+    <div class="container">
+      <div class="offer-card">
+        <div class="offer-bg-crab">🦀</div>
+        <div class="offer-content">
+          <p class="offer-eyebrow">Limited Time Offer</p>
+          <h2>Seafood Feast for Two</h2>
+          <p>Two signature crab donburi bowls + two sides + drinks</p>
+          <div class="offer-price">
+            <span class="old-price">৳900</span>
+            <span class="new-price">৳699</span>
+          </div>
+          <a href="#menu" class="btn-primary">Grab the Deal</a>
+        </div>
+        <div class="offer-visual">
+          <div class="offer-bowl">🍱🦀🦐🍳</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Gallery</p>
+        <h2 class="section-title">Feast for the <em>Eyes</em></h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gi-large">
+          <div class="gallery-placeholder gp1">
+            <span>🦀</span>
+            <p>Signature Crab Bowl</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder gp2">
+            <span>🍱</span>
+            <p>Donburi Special</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder gp3">
+            <span>🦐</span>
+            <p>Prawn Tempura</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder gp4">
+            <span>🌊</span>
+            <p>Ocean Platter</p>
+          </div>
+        </div>
+        <div class="gallery-item gi-wide">
+          <div class="gallery-placeholder gp5">
+            <span>🦞</span>
+            <p>Lobster Donburi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Guest Reviews</p>
+        <h2 class="section-title">What Our <em>Guests Say</em></h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card featured">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"An absolutely stunning seafood experience! The crab donburi was rich, flavourful and perfectly portioned. Will definitely return."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">S</div>
+            <div>
+              <span class="reviewer-name">Samira H.</span>
+              <span class="reviewer-tag">Regular Guest</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★☆</div>
+          <p class="review-text">"Great concept, unique flavours. The prawn tempura was crispy and fresh. Love the cozy dine-in ambience on Love Road."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">Z</div>
+            <div>
+              <span class="reviewer-name">Zesan A.</span>
+              <span class="reviewer-tag">Local Guide</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★☆</div>
+          <p class="review-text">"The seafood was incredibly fresh. The crab sauce over warm rice is something I dream about. Highly recommended!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">T</div>
+            <div>
+              <span class="reviewer-name">Tarannum M.</span>
+              <span class="reviewer-tag">Food Enthusiast</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Find Us</p>
+        <h2 class="section-title">Come Visit <em>Crab Station</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Address</h4>
+              <p>House #01, Road No.6<br/>Love Road, Mohammadpur<br/>Dhaka 1216, Bangladesh</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Hours</h4>
+              <p>Opens at 10 PM daily<br/>Late night dining available</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fas fa-motorcycle"></i></div>
+            <div>
+              <h4>Delivery</h4>
+              <p>Available via foodpanda<br/>Fast & reliable delivery</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61579154035907" target="_blank" class="social-btn facebook">
+              <i class="fab fa-facebook-f"></i> Follow on Facebook
+            </a>
+            <a href="https://www.foodpanda.com.bd/restaurant/q5ff/crab-station" target="_blank" class="social-btn foodpanda">
+              <i class="fas fa-utensils"></i> Order on foodpanda
+            </a>
+          </div>
+        </div>
+        <div class="contact-map">
+          <div class="map-placeholder">
+            <i class="fas fa-map-marked-alt"></i>
+            <p>R934+4Q, Love Road<br/>Mohammadpur, Dhaka</p>
+            <a href="https://maps.google.com/?q=House+01+Road+6+Love+Road+Mohammadpur+Dhaka" target="_blank" class="btn-primary">
+              <i class="fas fa-directions"></i> Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon">🦀</span>
+          <div class="logo-text">
+            <span class="logo-main">Crab Station</span>
+            <span class="logo-sub">Seafood Donburi</span>
+          </div>
+        </a>
+        <p>Premium seafood donburi in the heart of Dhaka. Fresh, bold, unforgettable.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Order Online</h4>
+        <ul>
+          <li><a href="https://www.foodpanda.com.bd/restaurant/q5ff/crab-station" target="_blank">foodpanda</a></li>
+          <li><a href="#menu">Online Menu</a></li>
+          <li><a href="#contact">Dine-in Info</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="footer-social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61579154035907" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p class="footer-address"><i class="fas fa-map-marker-alt"></i> House #01, Road No.6, Love Road, Dhaka 1216</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Crab Station. All rights reserved. | Crafted with 🦀 in Dhaka</p>
+    </div>
+  </footer>
+
+  <!-- ============ CART SIDEBAR ============ -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>🛒 Your Order</h3>
+      <button onclick="toggleCart()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <span>🦀</span>
+        <p>Your cart is empty</p>
+        <a href="#menu" onclick="toggleCart()">Browse Menu</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">৳0</span>
+      </div>
+      <a href="https://www.foodpanda.com.bd/restaurant/q5ff/crab-station" target="_blank" class="btn-primary checkout-btn">
+        <i class="fas fa-external-link-alt"></i> Order via foodpanda
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ TOAST ============ -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
